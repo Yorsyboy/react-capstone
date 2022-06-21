@@ -4,7 +4,7 @@
   justify-content: space-between;
   padding: 5px;
   background-color: #4369b2;
-  height: 50px;
+  height: 80px;
   box-shadow: 2px 2px 4px 0 rgb(0 0 0 / 20%);
   color: #fff;
 }
@@ -35,4 +35,9 @@
 .navbar-left {
   display: flex;
   justify-content: space-between;
+}
+
+.imgdog {
+  height: 40px;
+  width: 80px;
 }

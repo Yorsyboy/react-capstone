@@ -5,7 +5,7 @@ import dog from '../../images/dog.png';
 
 const Navbar = () => (
   <div className="navbar">
-    <img src={dog} alt="Dog" height="40" />
+    <img className="imgdog" src={dog} alt="Dog" />
     <h2>Dog Breeds</h2>
     <div>
       <IoSettingsOutline />

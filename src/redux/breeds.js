@@ -1,10 +1,10 @@
-import TheDogApi from "../api/TheDogApi";
+import TheDogApi from '../api/TheDogApi';
 
-const BREEDS_FETCHED = "BREEDS_FETCHED";
-const CAROUSEL_FETCHED = "CAROUSEL_FETCHED";
+const BREEDS_FETCHED = 'BREEDS_FETCHED';
+const CAROUSEL_FETCHED = 'CAROUSEL_FETCHED';
 
 const fetchBreeds = () => async (dispatch) => {
-  const breeds = await TheCatApi.getAllBreeds();
+  const breeds = await TheDogApi.getAllBreeds();
 
   if (breeds) {
     dispatch({
@@ -16,21 +16,19 @@ const fetchBreeds = () => async (dispatch) => {
   }
 };
 
-const fetchCarousel =
-  ({ id }) =>
-  async (dispatch) => {
-    const carousel = await TheCatApi.getCarouselForBreed({ breedID: id });
+const fetchCarousel = ({ id }) => async (dispatch) => {
+  const carousel = await TheDogApi.getCarouselForBreed({ breedID: id });
 
-    if (carousel) {
-      dispatch({
-        type: CAROUSEL_FETCHED,
-        id,
-        carousel,
-      });
-    } else {
-      // TODO Handle Error
-    }
-  };
+  if (carousel) {
+    dispatch({
+      type: CAROUSEL_FETCHED,
+      id,
+      carousel,
+    });
+  } else {
+    // TODO Handle Error
+  }
+};
 
 const breeds = (state = [], actions) => {
   switch (actions.type) {
