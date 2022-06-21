@@ -1,10 +1,11 @@
 import React from 'react';
 import { IoSettingsOutline } from 'react-icons/io5';
 import './navbar.css';
+import dog from '../../images/dog.png';
 
 const Navbar = () => (
   <div className="navbar">
-    <h1>2022</h1>
+    <img src={dog} alt="Dog" height="40" />
     <h2>Dog Breeds</h2>
     <div>
       <IoSettingsOutline />
