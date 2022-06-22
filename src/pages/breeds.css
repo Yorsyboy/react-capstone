@@ -1,0 +1,18 @@
+.headline {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 200px;
+  padding: 15px;
+  background-color: #5888e6;
+}
+
+img {
+  height: 200px;
+  width: 50vw;
+  object-fit: contain;
+}
+
+.loading-indicator {
+  margin: 100px auto;
+}
