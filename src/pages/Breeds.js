@@ -1,4 +1,5 @@
 import { Container, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ReactLoading from 'react-loading';
@@ -9,6 +10,7 @@ import cat from '../images/cat.png';
 import './breeds.css';
 
 const Breeds = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const breeds = useSelector((state) => state.breeds);
   const fact = useSelector((state) => state.fact);
@@ -21,30 +23,29 @@ const Breeds = () => {
   return (
     <div id="breeds-page">
       <div className="headline">
-        <img src={cat} alt="Dog" />
+        <img src={cat} alt="CAT" />
         <p>&quot;Hi, Weclome &quot;</p>
         <div>
-          <p className="meow-fact">Meow Fact</p>
+          <p className="meow-fact">Cat Fact</p>
           <p>
             {fact === '' ? <ReactLoading type="cubes" /> : fact ?? 'We failed to get a fact for meow :('}
           </p>
         </div>
       </div>
-      <h1 className="divider">LIST OF DOG BREEDS</h1>
+      <h1 className="divider">LIST OF CAR  BREEDS</h1>
+      {/* eslint-disable-next-line no-nested-ternary */}
       {!breeds.length ? <ReactLoading type="spinningBubbles" className="loading-indicator" /> : (
         <Container fluid>
           <Row xs={2}>
-            {breeds.map(({
-              id,
-              origin,
-              name,
-              image,
-            }) => (
+            {breeds.map((breed) => (
               <BreedCard
-                key={id}
-                origin={origin}
-                name={name}
-                imageURL={image && image.url ? image.url : 'https://www.prestashop.com/sites/default/files/wysiwyg/404_not_found.png'}
+                key={breed.id}
+                origin={breed.origin}
+                name={breed.name}
+                imageURL={breed.image && breed.image.url ? breed.image.url : 'https://www.prestashop.com/sites/default/files/wysiwyg/404_not_found.png'}
+                onClick={() => {
+                  navigate('/details', { state: { breed } });
+                }}
               />
             ))}
           </Row>
