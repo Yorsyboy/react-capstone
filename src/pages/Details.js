@@ -8,7 +8,6 @@ import Characteristic from '../components/Characteristic';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { fetchCarousel, resetCarousel } from '../redux/carousel';
 import './details.css';
-// import { IoIosArrowBack } from 'react-icons/io';
 
 const Details = () => {
   const { state } = useLocation();
