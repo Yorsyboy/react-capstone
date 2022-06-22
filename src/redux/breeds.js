@@ -1,10 +1,10 @@
-import TheDogApi from '../api/TheDogApi';
+import TheCatApi from '../api/TheCatApi';
 
 const BREEDS_FETCHED = 'BREEDS_FETCHED';
 const CAROUSEL_FETCHED = 'CAROUSEL_FETCHED';
 
 const fetchBreeds = () => async (dispatch) => {
-  const breeds = await TheDogApi.getAllBreeds();
+  const breeds = await TheCatApi.getAllBreeds();
 
   if (breeds) {
     dispatch({
@@ -17,7 +17,7 @@ const fetchBreeds = () => async (dispatch) => {
 };
 
 const fetchCarousel = ({ id }) => async (dispatch) => {
-  const carousel = await TheDogApi.getCarouselForBreed({ breedID: id });
+  const carousel = await TheCatApi.getCarouselForBreed({ breedID: id });
 
   if (carousel) {
     dispatch({
@@ -30,7 +30,7 @@ const fetchCarousel = ({ id }) => async (dispatch) => {
   }
 };
 
-const breeds = (state = [], actions) => {
+const breedsReducer = (state = [], actions) => {
   switch (actions.type) {
     case BREEDS_FETCHED:
       return actions.breeds;
@@ -49,4 +49,4 @@ const breeds = (state = [], actions) => {
   }
 };
 
-export { breeds as default, fetchBreeds, fetchCarousel };
+export { breedsReducer as default, fetchBreeds, fetchCarousel };

@@ -3,15 +3,18 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ReactLoading from 'react-loading';
 import { fetchBreeds } from '../redux/breeds';
+import { fetchDogFact } from '../redux/fact';
 import BreedCard from '../components/BreedCard';
 import doggy from '../images/doggy.png';
 import './breeds.css';
 
 const Breeds = () => {
   const dispatch = useDispatch();
-  const breeds = useSelector((state) => state);
+  const breeds = useSelector((state) => state.breeds);
+  const fact = useSelector((state) => state.fact);
 
   useEffect(() => {
+    if (fact === '') dispatch(fetchDogFact());
     if (!breeds.length) dispatch(fetchBreeds());
   }, [fetchBreeds]);
 
@@ -20,6 +23,12 @@ const Breeds = () => {
       <div className="headline">
         <img src={doggy} alt="Dog" />
         <p>&quot;Hi, Weclome &quot;</p>
+        <div>
+          <p className="meow-fact">Meow Fact</p>
+          <p>
+            {fact === '' ? <ReactLoading type="cubes" /> : fact ?? 'We failed to get a fact for meow :('}
+          </p>
+        </div>
       </div>
       <h1 className="divider">LIST OF DOG BREEDS</h1>
       {!breeds.length ? <ReactLoading type="spinningBubbles" className="loading-indicator" /> : (
