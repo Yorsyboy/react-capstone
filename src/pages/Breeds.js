@@ -27,9 +27,15 @@ const Breeds = () => {
         <p>&quot;Hi, Weclome &quot;</p>
         <div>
           <p className="meow-fact">Cat Fact</p>
-          <p>
-            {fact === '' ? <ReactLoading type="cubes" /> : fact ?? 'We failed to get a fact for meow :('}
-          </p>
+          {/* eslint-disable-next-line no-nested-ternary */}
+          {fact === '' ? <ReactLoading type="cubes" /> : fact ? (
+            <p>
+              &quot;
+              {fact}
+              &quot;
+            </p>
+          )
+            : <p>We failed to get a fact for meow :(</p>}
         </div>
       </div>
       <h1 className="divider">LIST OF CAR  BREEDS</h1>
