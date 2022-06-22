@@ -3,7 +3,7 @@ class TheCatApi {
 
   static headers = {
     'Content-type': 'application/json; charset=UTF-8',
-    'x-api-key': '7a9850d8-d055-4157-b9e7-dee77c298550',
+    'x-api-key': 'process.env.REACT_APP_API_KEY',
   };
 
   static getAllBreeds = async () => fetch(`${this.baseURL}breeds`, {

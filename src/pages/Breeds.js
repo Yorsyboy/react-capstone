@@ -24,7 +24,9 @@ const Breeds = () => {
     <div id="breeds-page">
       <div className="headline">
         <img src={cat} alt="CAT" />
-        <p>&quot;Hi, Weclome &quot;</p>
+        <p>
+          &quot;Hi, Weclome &quot;
+        </p>
         <div>
           <p className="meow-fact">Cat Fact</p>
           {/* eslint-disable-next-line no-nested-ternary */}
