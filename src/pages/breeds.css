@@ -1,7 +1,8 @@
 #breeds-page {
- display: flex;
- flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
+
 .first-head {
   display: flex;
   gap: 10px;
