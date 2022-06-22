@@ -22,13 +22,13 @@ const Breeds = () => {
 
   return (
     <div id="breeds-page">
-      <div className="headline">
-        <img src={cat} alt="CAT" />
-        <p>
+      <div className="first-head">
+        <img src={cat} alt="cat" />
+        <p className="welcome">
           &quot;Hi, Weclome &quot;
         </p>
-        <div>
-          <p className="meow-fact">Cat Fact</p>
+        <div className="fact">
+          <p className="meow-fact">Cat Fact:</p>
           {/* eslint-disable-next-line no-nested-ternary */}
           {fact === '' ? <ReactLoading type="cubes" /> : fact ? (
             <p>
@@ -40,11 +40,11 @@ const Breeds = () => {
             : <p>We failed to get a fact for meow :(</p>}
         </div>
       </div>
-      <h1 className="divider">LIST OF CAR  BREEDS</h1>
+      <h1 className="list">LIST OF CAT BREEDS</h1>
       {/* eslint-disable-next-line no-nested-ternary */}
-      {!breeds.length ? <ReactLoading type="spinningBubbles" className="loading-indicator" /> : (
+      {breeds ? !breeds.length ? <ReactLoading type="spinningBubbles" className="loading-indicator" /> : (
         <Container fluid>
-          <Row xs={2}>
+          <Row xs={2} md={3} lg={4} xxl={6}>
             {breeds.map((breed) => (
               <BreedCard
                 key={breed.id}
@@ -58,7 +58,7 @@ const Breeds = () => {
             ))}
           </Row>
         </Container>
-      )}
+      ) : <p className="loading-indicator">We are unable to get breeds for now :(</p>}
     </div>
   );
 };

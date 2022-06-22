@@ -7,7 +7,7 @@ import ReactLoading from 'react-loading';
 import Characteristic from '../components/Characteristic';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { fetchCarousel, resetCarousel } from '../redux/carousel';
-// import { IoIosArrowBack } from 'react-icons/io';
+import './details.css';
 
 const Details = () => {
   const { state } = useLocation();
@@ -23,13 +23,17 @@ const Details = () => {
   return (
     <>
       <div id="details-page">
-        {carousel && carousel.length > 0 ? (
-          <Carousel showArrows autoPlay swipeable axis="horizontal" showThumbs={false} showStatus={false} dynamicHeight={false} infiniteLoop>
-            {carousel.map((image) => <img key={image} src={image} alt="" />)}
-          </Carousel>
-        ) : <ReactLoading type="spinningBubbles" className="loading-indicator" />}
-        <p>{breed.name}</p>
-        <h1 className="divider">DETAILED CHARACTERISTICS</h1>
+        <div className="headline">
+          {carousel && carousel.length > 0 ? (
+            <Carousel className="carousel" showArrows autoPlay swipeable axis="horizontal" showThumbs={false} showStatus={false} dynamicHeight={false} infiniteLoop>
+              {carousel.map((image) => <img key={image} src={image} alt="" />)}
+            </Carousel>
+          ) : <ReactLoading type="spinningBubbles" className="loading-indicator" />}
+        </div>
+        <h1 className="details">
+          DETAILED INFO OF &nbsp;
+          { breed.name }
+        </h1>
         <Container fluid>
           <Row xs={1}>
             <Characteristic characteristic="Adaptability" value={`${breed.adaptability}/5`} />
