@@ -2,8 +2,8 @@ import CatFactsApi from '../api/CatFactsApi';
 
 const FACT_FETCHED = 'FACT_FETCHED';
 
-const fetchDogFact = () => async (dispatch) => {
-  const fact = await CatFactsApi.getDogFact();
+const fetchCatFact = () => async (dispatch) => {
+  const fact = await CatFactsApi.getCatFact();
 
   dispatch({
     type: FACT_FETCHED,
@@ -22,5 +22,5 @@ const factReducer = (state = '', actions) => {
 
 export {
   factReducer as default,
-  fetchDogFact,
+  fetchCatFact,
 };

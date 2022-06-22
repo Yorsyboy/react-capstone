@@ -3,9 +3,9 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ReactLoading from 'react-loading';
 import { fetchBreeds } from '../redux/breeds';
-import { fetchDogFact } from '../redux/fact';
+import { fetchCatFact } from '../redux/fact';
 import BreedCard from '../components/BreedCard';
-import doggy from '../images/doggy.png';
+import cat from '../images/cat.png';
 import './breeds.css';
 
 const Breeds = () => {
@@ -14,14 +14,14 @@ const Breeds = () => {
   const fact = useSelector((state) => state.fact);
 
   useEffect(() => {
-    if (fact === '') dispatch(fetchDogFact());
+    if (fact === '') dispatch(fetchCatFact());
     if (!breeds.length) dispatch(fetchBreeds());
   }, [fetchBreeds]);
 
   return (
     <div id="breeds-page">
       <div className="headline">
-        <img src={doggy} alt="Dog" />
+        <img src={cat} alt="Dog" />
         <p>&quot;Hi, Weclome &quot;</p>
         <div>
           <p className="meow-fact">Meow Fact</p>

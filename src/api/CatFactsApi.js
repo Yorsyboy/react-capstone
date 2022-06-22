@@ -1,7 +1,7 @@
 class CatFactsApi {
   static baseURL = 'https://meowfacts.herokuapp.com/';
 
-  static getDogFact = async () => fetch(this.baseURL, {
+  static getCatFact = async () => fetch(this.baseURL, {
     method: 'GET',
   }).then(async (response) => {
     if (response.status === 200) {
