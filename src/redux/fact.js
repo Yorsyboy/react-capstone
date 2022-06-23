@@ -23,4 +23,5 @@ const factReducer = (state = '', actions) => {
 export {
   factReducer as default,
   fetchCatFact,
+  FACT_FETCHED,
 };
