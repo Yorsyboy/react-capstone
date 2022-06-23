@@ -23,15 +23,15 @@ const Breeds = () => {
   return (
     <div id="breeds-page">
       <div className="first-head">
-        <img src={cat} alt="cat" />
-        <p className="welcome">
-          &quot;Hi, Weclome &quot;
-        </p>
+        <div>
+          <img src={cat} alt="cat" />
+          <b>Hi, Weclome 👋</b>
+        </div>
         <div className="fact">
-          <p className="meow-fact">Cat Fact:</p>
+          <p className="meow-fact">Cat Fact</p>
           {/* eslint-disable-next-line no-nested-ternary */}
           {fact === '' ? <ReactLoading type="cubes" /> : fact ? (
-            <p>
+            <p className="single-fact">
               &quot;
               {fact}
               &quot;
