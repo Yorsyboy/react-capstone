@@ -24,4 +24,4 @@ const breedsReducer = (state = [], actions) => {
   }
 };
 
-export { breedsReducer as default, fetchBreeds };
+export { breedsReducer as default, fetchBreeds, BREEDS_FETCHED };
