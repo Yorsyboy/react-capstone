@@ -42,7 +42,7 @@ Open http://localhost:3000 to view it in your browser
 
 - GitHub: [@Yorsyboy](https://github.com/Yorsyboy)
 - Twitter: [@tboytaiwo](https://twitter.com/Tboytaiwo)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/taiwo-toyosi
+- LinkedIn: [LinkedIn](https://linkedin.com/in/taiwo-toyosi)
 
 ## 🤝 Contributing
 
