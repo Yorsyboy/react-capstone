@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: #548dfe;
-  padding: 0 5px 0 0;
+  padding: 20px;
   box-shadow: 2px 2px 4px 0 rgb(0 0 0 / 20%);
   color: #fff;
   margin-bottom: 5px;
@@ -26,6 +26,7 @@
   text-align: end;
   margin-right: 10px;
   align-self: end;
+  align-items: flex-end;
 }
 
 h3 {
