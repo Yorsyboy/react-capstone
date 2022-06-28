@@ -9,6 +9,7 @@
 - ReactJS
 - Redux
 - JSX
+- CSS
 
 ## Live Demo
 
