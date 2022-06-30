@@ -1,0 +1,49 @@
+.headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel {
+  height: 100%;
+  width: 50%;
+}
+
+.headline img {
+  width: 50%;
+  height: 30vh;
+}
+
+.details {
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  #breed-details-page .headline img {
+    height: 270px;
+  }
+}
+
+@media (min-width: 900px) {
+  #breed-details-page .headline img {
+    height: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #breed-details-page .headline img {
+    height: 350px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #breed-details-page .headline img {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1400px) {
+  #breed-details-page .headline img {
+    height: 500px;
+  }
+}
