@@ -1,0 +1,35 @@
+.first-head {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background-color: #5888e6;
+}
+
+.list {
+  text-align: center;
+}
+
+.fact {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+}
+
+.meow-fact {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.single-fact {
+  width: 100%;
+}
+
+p {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.loading-indicator {
+  text-align: center;
+  margin: 150px auto;
+}
