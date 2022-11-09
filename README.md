@@ -21,7 +21,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-A Web Browser (preferably Google Chrome)
+A Web Browser (preferably Google Chrome).
 
 ### Setup
 
@@ -36,7 +36,7 @@ In the project directory, you can run:
 ```npm start```
 
 Runs the app in the development mode.<br>
-Open http://localhost:3000 to view it in your browser
+Open ```http://localhost:3000``` to view it in your browser
 
 ## Author
 
